@@ -1,0 +1,75 @@
+/* Define color variables */
+:root {
+  --color-bg-light: #f0f2f5; /* Light mode background */
+  --color-bg-dark: #222; /* Dark mode background */
+  --color-text-light: #222; /* Light mode text */
+  --color-text-dark: #f0f2f5; /* Dark mode text */
+  --color-accent-light: #3399ff; /* Light mode accent */
+  --color-accent-dark: #ff9933; /* Dark mode accent */
+  color-scheme: light; /* Set default mode to light */
+}
+
+/* Global styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 1rem; /* Added padding here */
+  color: var(--color-text-light);
+  background-color: var(--color-bg-light);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Toggle between light and dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-bg-light: #222;
+    --color-bg-dark: #f0f2f5;
+    --color-text-light: #f0f2f5;
+    --color-text-dark: #222;
+    --color-accent-light: #ff9933;
+    --color-accent-dark: #3399ff;
+  }
+}
+
+/* Elements */
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  margin: 1rem 0;
+  color: var(--color-text-light);
+}
+
+p {
+  margin: 0.5rem 0;
+  color: var(--color-text-light);
+}
+
+a {
+  color: var(--color-accent-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent-dark);
+}
+
+/* Buttons */
+button {
+  background-color: var(--color-accent-light);
+  color: var(--color-text-dark);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--color-accent-dark);
+}
+
+/* You can add more styles for other elements here */
+
