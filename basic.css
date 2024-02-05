@@ -1,89 +1,67 @@
+/* Base styles */
 body {
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif; /* Modern, web-safe font */
+  padding: 20px; /* Ample padding for content */
   margin: 0;
-  padding: 0;
-  transition: background-color 0.3s ease-in-out; /* Transition for smooth theme change */
+  color: #333; /* Default text color */
+  background-color: #f1f1f1; /* Default background color */
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #f5f5f5; /* Light mode background */
+h1, h2, h3 {
+  font-weight: bold;
 }
 
-.nav {
-  display: flex;
-  gap: 1rem;
+a {
+  color: #2196f3; /* Primary color */
+  text-decoration: none;
 }
 
-.theme-toggle {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+a:hover {
+  color: #1769aa; /* Darker shade on hover */
 }
 
 /* Light mode styles */
-.light-mode {
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-.light-mode h1, .light-mode h2, .light-mode h3 {
-  color: #111;
-}
-
-.light-mode a {
-  color: #333;
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f1f1f1;
+    color: #333;
+  }
 }
 
 /* Dark mode styles */
-.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-.dark-mode h1, .dark-mode h2, .dark-mode h3 {
-  color: #ddd;
-}
-
-.dark-mode a {
-  color: #fff;
-}
-
-/* Media query for dark mode toggle */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #333; /* Dark mode default background */
-  }
-  
-  .theme-toggle {
-    /* Customize icon for dark mode toggle */
+    background-color: #212121;
+    color: #fff;
   }
 
-  .light-mode {
-    display: none; /* Hide light mode styles in dark mode */
-  }
-
-  .dark-mode {
-    display: block; /* Show dark mode styles in dark mode */
+  nav a,
+  footer p {
+    color: #ccc; /* Adjust text color for better contrast */
   }
 }
 
-/* Basic Material Design influences */
-header, main, footer {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+/* Additional styling for specific elements */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-button {
-  background-color: #00bcd4; /* Material primary color */
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
+nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Add more styles for a complete layout */
+nav li {
+  margin-right: 10px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+/* You can add more styles here for other elements */
