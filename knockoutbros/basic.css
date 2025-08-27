@@ -1,0 +1,67 @@
+/* Base styles */
+body {
+  font-family: "Inter", sans-serif; /* Modern, web-safe font */
+  padding: 20px; /* Ample padding for content */
+  margin: 0;
+  color: #333; /* Default text color */
+  background-color: #f1f1f1; /* Default background color */
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+a {
+  color: #2196f3; /* Primary color */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1769aa; /* Darker shade on hover */
+}
+
+/* Light mode styles */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #212121;
+    color: #fff;
+  }
+
+  nav a,
+  footer p {
+    color: #ccc; /* Adjust text color for better contrast */
+  }
+}
+
+/* Additional styling for specific elements */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+/* You can add more styles here for other elements */
